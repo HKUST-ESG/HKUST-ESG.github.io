@@ -2,30 +2,8 @@
 layout: post
 title: "Blockchain without Waste: Proof-of-Stake"
 date: 2020-06-27
-author: "0             Masulis
-1            Garmaise
-2              Dimson
-3             Borisov
-4               Zeume
-           ...       
-65                 He
-66               Hong
-67    Amoussou-Guenou
-68           Banerjee
-69         Kacperczyk
-Name: Author(s), Length: 70, dtype: object"
-presenter: "0             Masulis
-1            Garmaise
-2              Dimson
-3             Borisov
-4               Zeume
-           ...       
-65                 He
-66               Hong
-67    Amoussou-Guenou
-68           Banerjee
-69         Kacperczyk
-Name: Author(s), Length: 70, dtype: object"
+author: "Saleh"
+presenter: "Saleh"
 categories: [Climate Change,Emissions,Review of Financial Studies]
 papers:
 - name: "10.2139/ssrn.3183935"
