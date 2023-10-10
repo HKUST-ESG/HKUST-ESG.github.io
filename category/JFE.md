@@ -1,6 +1,6 @@
 ---
 layout: posts_by_category
-categories: Journal of Financial Studies
-title: Journal of Financial Studies
-permalink: /category/Journal of Financial Studies
+categories: Review of Financial Studies
+title: Review of Financial Studies
+permalink: /category/Review of Financial Studies
 ---
