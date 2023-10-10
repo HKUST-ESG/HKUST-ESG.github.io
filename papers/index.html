@@ -54,10 +54,10 @@ var aList = document.querySelectorAll("a");
 
 // 遍历每个a标签
 aList.forEach(function(a) {
-  var text = a.textContent.trim(); // 获取a标签的文本内容
-  var words = text.split(" "); // 将文本内容按空格分割为单词数组
-  var truncatedText = words.slice(0, 3).join(" "); // 截取前三个单词并重新组合为文本内容
-  a.textContent = truncatedText; // 将截取后的文本内容赋值给a标签
+  var text = a.textContent.trim();
+  var words = text.split(" ");
+  var truncatedText = words.slice(0, 3).join(" ");
+  a.textContent = truncatedText;
 });
 
 }
