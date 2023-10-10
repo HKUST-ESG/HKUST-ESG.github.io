@@ -52,3 +52,39 @@ layout: default
     <p>There are no posts in this categories.</p>
   {% endif %}
 </div>
+
+<script type="text/javascript">
+window.onload=function(){
+var aList = document.querySelectorAll("a");
+aList.forEach(function(a) {
+  var text = a.textContent.trim();
+  var words = text.split(" ");
+  var truncatedText = words.slice(0, 3).join(" ");
+  a.textContent = truncatedText;
+});
+
+
+	
+var uls = document.querySelectorAll("div.list-group");
+
+[].forEach.call(uls, function(ul) {
+	var liList = ul.querySelectorAll("li");
+  var liArray = Array.from(liList);
+  liArray = liArray.filter(function(li) {
+    var span = li.querySelector("span");
+    return span && span.textContent.trim() !== "null" && span.textContent.trim() !== "";
+  });
+  liArray.sort(function(a, b) {
+    var spanA = a.querySelector("span");
+    var spanB = b.querySelector("span");
+    var textA = spanA ? spanA.textContent.trim().charAt(0) : "";
+    var textB = spanB ? spanB.textContent.trim().charAt(0) : "";
+    return textA.localeCompare(textB);
+  });
+  ul.innerHTML = "";
+  liArray.forEach(function(li) {
+    ul.appendChild(li);
+  });
+});
+}
+</script>
