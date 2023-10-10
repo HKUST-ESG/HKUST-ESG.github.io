@@ -2,5 +2,5 @@
 layout: posts_by_category
 categories: Journal of Financial Studies
 title: Journal of Financial Studies
-permalink: /category/Journal%20of%20Financial%20Studies
+permalink: /category/Journal of Financial Studies
 ---
