@@ -55,7 +55,15 @@ layout: default
 
 <script type="text/javascript">
 window.onload=function(){
-var aList = document.querySelectorAll("a");
+var liElements = document.querySelectorAll('li');
+var aList = [];
+liElements.forEach(function(li) {
+    var linksInLi = li.querySelectorAll('a');
+    linksInLi.forEach(function(link) {
+        aList.push(link);
+    });
+});
+
 aList.forEach(function(a) {
   var text = a.textContent.trim();
   var words = text.split(" ");
