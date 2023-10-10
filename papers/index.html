@@ -56,6 +56,25 @@ aList.forEach(function(a) {
   var truncatedText = words.slice(0, 3).join(" ");
   a.textContent = truncatedText;
 });
-
+function sortLiByFirstLetter() {
+  var ul = document.querySelector("ul.posts");
+  var liList = ul.querySelectorAll("li");
+  var liArray = Array.from(liList);
+  liArray = liArray.filter(function(li) {
+    var span = li.querySelector("span");
+    return span && span.textContent.trim() !== "null" && span.textContent.trim() !== "";
+  });
+  liArray.sort(function(a, b) {
+    var spanA = a.querySelector("span");
+    var spanB = b.querySelector("span");
+    var textA = spanA ? spanA.textContent.trim().charAt(0) : "";
+    var textB = spanB ? spanB.textContent.trim().charAt(0) : "";
+    return textA.localeCompare(textB);
+  });
+  ul.innerHTML = "";
+  liArray.forEach(function(li) {
+    ul.appendChild(li);
+  });
+}
 }
 </script>
