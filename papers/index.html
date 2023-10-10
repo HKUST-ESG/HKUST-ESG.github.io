@@ -8,7 +8,7 @@ layout: default
 
   <ul class="posts">
     {% for post in paginator.posts %}
-    <li><span> {{ post.presenter }} » </span> <i><span>{{ post.date | date_to_string }} » {{ post.categories[-1] }}</span></i> <a href="{{ post.url }}">{{ post.title }}</a>
+    <li><span> {{ post.presenter }} » </span> <i><span>{{ post.date | date_to_string }} » {{ post.categories[-1] }} » </span></i> <a href="{{ post.url }}">{{ post.title }}</a>
         {% for paper in post.papers %}
 	 » <a href="{{ paper.link }}"> {{ paper.name }} </a>
 	{% endfor %}
