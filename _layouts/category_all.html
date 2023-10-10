@@ -33,10 +33,26 @@ layout: default
         {% endif %}
       {% endif %}
         <ul class="posts">
-		<li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <span>{{ post.author }}</span> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li>
+		<li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <span>{{ post.author }}</span> &raquo; <i><span>{{ post.date | date_to_string }}</span></i>
+	{% for paper in post.papers %}
+	 > <a href="{{ paper.link }}"> {{ paper.name }} </a>
+	{% endfor %}
+		</li>
         </ul>
       {% if forloop.last %}
         </div>
       {% endif %}
     {% endfor %}
 </div>
+<script type="text/javascript">
+window.onload=function(){
+var aList = document.querySelectorAll("a");
+aList.forEach(function(a) {
+  var text = a.textContent.trim();
+  var words = text.split(" ");
+  var truncatedText = words.slice(0, 3).join(" ");
+  a.textContent = truncatedText;
+});
+
+}
+</script>
